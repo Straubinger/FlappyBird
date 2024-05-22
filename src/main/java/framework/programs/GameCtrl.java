@@ -29,11 +29,7 @@ public class GameCtrl {
             if (max < scoreList.get(i))
                 max = scoreList.get(i);
         }
-        if(max < score) {
-            highscore = score;
-        } else {
-            highscore = max;
-        }
+        highscore = Math.max(max, score);
         return highscore;
     }
 
