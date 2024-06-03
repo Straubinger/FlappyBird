@@ -11,6 +11,14 @@ public class Pillar
 
     Random r = new Random();
 
+    // Constructor
+    public Pillar(int i, float xSize, float ySize)
+    {
+        float random = r.nextFloat() * ((ySize-200) - 0) + 0;
+        xPos = 100+(i*(xSize-100)/2);
+        opening = random+100;
+    }
+
     // Getters
     public float getxPos()
     {
@@ -22,14 +30,7 @@ public class Pillar
         return opening;
     }
 
-    // Other methods
-    public Pillar(int i, PApplet applet, float xSize, float ySize)
-    {
-        float random = r.nextFloat() * ((ySize-200) - 0) + 0;
-        xPos = 100+(i*(xSize-100)/2);
-        opening = random+100;
-    }
-
+    // Methods
     public void drawPillar(PApplet applet, float ySize)
     {
         applet.line(xPos,0,xPos,opening-100);

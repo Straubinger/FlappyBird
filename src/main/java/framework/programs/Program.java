@@ -18,7 +18,7 @@ public class Program implements ProcessingEngine
     {
         applet.size(xSize,ySize);
         for(int i = 0;i<3;i++) {
-            p[i]=new Pillar(i, applet, (float)xSize, (float)ySize);
+            p[i]=new Pillar(i, (float)xSize, (float)ySize);
         }
     }
 

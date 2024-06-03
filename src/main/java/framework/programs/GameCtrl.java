@@ -48,7 +48,7 @@ public class GameCtrl {
         return intro;
     }
 
-    // Other methods
+    // Methods
     public void reset()
     {
         scoreList.add(score);

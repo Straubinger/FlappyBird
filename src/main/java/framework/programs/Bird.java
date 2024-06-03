@@ -8,12 +8,14 @@ public class Bird
     private float yPos;
     private float ySpeed;
 
+    // Constructor
     public Bird(float xSize, float ySize)
     {
         xPos = xSize / 2;
         yPos = ySize / 2;
     }
 
+    // Methods
     public void drawBird(PApplet applet)
     {
         applet.stroke(255);
