@@ -6,10 +6,6 @@ import framework.Bird;
 import framework.Pillar;
 import framework.Menu;
 import framework.GameCtrl;
-//import framework.programs.BirdImpl;
-//import framework.programs.PillarImpl;
-//import framework.programs.MenuImpl;
-//import framework.programs.GameCtrlImpl;
 
 public class Program implements ProcessingEngine
 {
