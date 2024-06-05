@@ -1,8 +1,9 @@
-package framework.programs;
+package framework.Impl;
 
+import framework.GameCtrl;
 import java.util.ArrayList;
 
-public class GameCtrl {
+public class GameCtrlImpl implements GameCtrl {
 
     private int score = 0;
     private int max = 0;
@@ -13,16 +14,19 @@ public class GameCtrl {
     ArrayList<Integer> scoreList = new ArrayList<Integer>();
 
     // Getters and setters
+    @Override
     public int getScore()
     {
         return score;
     }
 
+    @Override
     public void setScore(int score)
     {
         this.score = score;
     }
 
+    @Override
     public int getHighscore()
     {
         for (int i = 1; i < scoreList.size(); i++) {
@@ -33,22 +37,26 @@ public class GameCtrl {
         return highscore;
     }
 
+    @Override
     public boolean getEnd()
     {
         return end;
     }
 
+    @Override
     public void setEnd(boolean end)
     {
         this.end = end;
     }
 
+    @Override
     public boolean getIntro()
     {
         return intro;
     }
 
-    // Methods
+    // Resets the score after collision
+    @Override
     public void reset()
     {
         scoreList.add(score);

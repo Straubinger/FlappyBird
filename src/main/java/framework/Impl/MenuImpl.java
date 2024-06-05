@@ -1,9 +1,12 @@
-package framework.programs;
+package framework.Impl;
 
+import framework.Menu;
 import processing.core.PApplet;
 
-public class Menus {
+public class MenuImpl implements Menu {
 
+    // Draws the start menu
+    @Override
     public void startMenu(PApplet applet)
     {
         applet.fill(0);
@@ -15,6 +18,8 @@ public class Menus {
         applet.text("Click to play",60,160,300,50);
     }
 
+    // Draws the end menu
+    @Override
     public void endMenu(PApplet applet, int score, int highscore)
     {
         applet.fill(0);
@@ -28,6 +33,8 @@ public class Menus {
         applet.text("Highscore: "+highscore,60,260,300,50);
     }
 
+    // Draws the score counter
+    @Override
     public void scoreCounter(PApplet applet, int score)
     {
         applet.fill(0);

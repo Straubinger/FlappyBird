@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 import framework.ProcessingEngine;
-import framework.programs.Program;
+import framework.Impl.Program;
 
 public class FlappyBird extends PApplet {
 

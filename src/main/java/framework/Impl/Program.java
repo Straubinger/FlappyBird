@@ -1,24 +1,32 @@
-package framework.programs;
+package framework.Impl;
 
 import processing.core.PApplet;
 import framework.ProcessingEngine;
+import framework.Bird;
+import framework.Pillar;
+import framework.Menu;
+import framework.GameCtrl;
+//import framework.programs.BirdImpl;
+//import framework.programs.PillarImpl;
+//import framework.programs.MenuImpl;
+//import framework.programs.GameCtrlImpl;
 
 public class Program implements ProcessingEngine
 {
     private final int xSize = 500;
     private final int ySize = 800;
 
-    Bird b = new Bird((float)xSize, (float)ySize);
-    Pillar[] p = new Pillar[3];
-    GameCtrl gc = new GameCtrl();
-    Menus m = new Menus();
+    Bird b = new BirdImpl((float)xSize, (float)ySize);
+    Pillar[] p = new PillarImpl[3];
+    GameCtrl gc = new GameCtrlImpl();
+    Menu m = new MenuImpl();
 
     @Override
     public void setup(PApplet applet)
     {
         applet.size(xSize,ySize);
         for(int i = 0;i<3;i++) {
-            p[i]=new Pillar(i, (float)xSize, (float)ySize);
+            p[i]=new PillarImpl(i, (float)xSize, (float)ySize);
         }
     }
 
