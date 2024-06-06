@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class GameCtrlImpl implements GameCtrl {
 
     private int score = 0;
-    private int max = 0;
     private int highscore = 0;
     private boolean end = false;
     private boolean intro = true;
@@ -29,11 +28,7 @@ public class GameCtrlImpl implements GameCtrl {
     @Override
     public int getHighscore()
     {
-        for (int i = 1; i < scoreList.size(); i++) {
-            if (max < scoreList.get(i))
-                max = scoreList.get(i);
-        }
-        highscore = Math.max(max, score);
+        highscore = Math.max(highscore, score);
         return highscore;
     }
 
